@@ -5,60 +5,63 @@ using System.Text;
 {
     public class News : INews
     {
-        private int ID;
-        private String Title;
-        private String PublishDate;
-        private String Author;
-        private String Content;
+        private int id;
+        private String title;
+        private String publishDate;
+        private String author;
+        private String content;
         public float AverageRate;
         public int[] RateList = new int[3];
-
-        public News(int ID, String Title, String PublishDate, String Author, String Content, int[] RateList)
-        {
-            this.ID = ID;
-            this.Title = Title;
-            this.PublishDate = PublishDate;
-            this.Author = Author;
-            this.Content = Content;
-            this.RateList = RateList;
-        }
         
-        public News()
-        {}
 
-        public int ID1
+        public int ID
         {
             get { return this.ID;}
             set { this.ID = value; }
         }
 
-        public string Title1
+        public string Title
         {
-            get { return this.Title;}
-            set { this.Title = value; }
+            get { return this.title;}
+            set { this.title = value; }
         }
 
-        public string PublishDate1
+        public string PublishDate
         {
-            get { return this.PublishDate; }
-            set { this.PublishDate = value; }
+            get { return this.publishDate; }
+            set { this.publishDate = value; }
         }
 
-        public string Author1
+        public string Author
         {
-            get { return this.Author; }
-            set { this.Author = value; }
+            get { return this.author; }
+            set { this.author = value; }
         }
 
-        public string Content1
+        public string Content
         {
-            get { return this.Content; }
-            set { this.Content = value; }
+            get { return this.content; }
+            set { this.content = value; }
         }
 
+        public News(int id, String title, String publishDate, String author, String content, int[] RateList)
+        {
+
+            this.ID = id;
+            this.Title = title;
+            this.PublishDate = publishDate;
+            this.Author = author;
+            this.Content = content;
+            this.RateList = rateList;
+
+        }
+        
+        public News()
+        {}
+        
         public void Display()
         {
-            Console.WriteLine(this.getTitle()+"--"+this.getPublishDate()+"--"+this.getAuthor()+ " -- "+this.getContent()+" -- "+this.getAverageRate());
+            Console.WriteLine("Title"+this.Title+"PublishDate:"+this.PublishDate+"Author"+this.Author+"Content"+this.Content+"AverageRate"+this.AverageRate);
         }
 
         public void Calculate()
